@@ -1,0 +1,233 @@
+body {
+  background-color: #272727;
+  font-family: 'Ubuntu';
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo {
+  color: #ffff;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.loginBox, .userInterfaceBox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 600px;
+  height: 630px;
+  border: white 1px solid;
+}
+
+.loginBox__title {
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+}
+
+.loginBox__description {
+  color: #d8d8d8;
+  width: 100%;
+  height: 90px;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+  text-align: center;
+}
+
+.loginBox__input {
+  width: 55%;
+  border: none;
+  border-bottom: #666666 1px solid;
+  color: #fff;
+  background-color: #272727;
+  margin-top: 20px;
+  margin-left: 20%;
+  padding: 10px;
+}
+
+.loginBox__button {
+  width: 45%;
+  margin-top: 45px;
+  margin-left: 30%;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+}
+
+.loginBox__checkbox {
+  margin-top: 40px;
+}
+
+.loginBox__acceptRights {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+  .loginBox, .userInterfaceBox {
+    padding: 10px;
+  }
+  .modal {
+    width: 80% !important;
+  }
+  .foodIcons {
+    width: 50% !important;
+    height: unset !important;
+  }
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navigation .menu {
+  color: #fff;
+  margin-top: -5px;
+  list-style: none;
+}
+
+.navigation .menu li {
+  padding: 10px;
+  font-size: 20px;
+  float: left;
+  margin-top: 15px;
+}
+
+.container {
+  width: 100%;
+}
+
+.signIn {
+  display: none;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  background-color: #d4d4d4;
+  -webkit-box-shadow: 10px 10px 18px -8px black;
+          box-shadow: 10px 10px 18px -8px black;
+}
+
+.modal__text {
+  padding: 20px;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.userInterfaceBox {
+  background-color: #fff;
+  width: 50%;
+  height: 600px;
+}
+
+.foodIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 490px;
+  height: 300px;
+}
+
+.foodIcons--ketchup {
+  background-image: url("../img/food_ketchup_icon.png");
+  height: 60px;
+  width: 60px;
+  background-position: 25% 75%;
+  background-size: 60px;
+}
+
+.foodIcons--hamburger {
+  background-image: url("../img/food_hamburger_icon.png");
+  height: 60px;
+  width: 60px;
+  background-position: 25% 75%;
+  background-size: 60px;
+}
+
+.foodIcons--sandwich {
+  background-image: url("../img/food_sandwich_icon.png");
+  height: 60px;
+  width: 60px;
+  background-position: 25% 75%;
+  background-size: 60px;
+}
+
+.foodIcons--cola {
+  background-image: url("../img/food_coke_icon.png");
+  height: 60px;
+  width: 60px;
+  background-position: 25% 75%;
+  background-size: 60px;
+}
+
+.foodIcons__text {
+  width: 180px;
+  margin-left: 5px;
+}
+
+.foodIcons__text--bold {
+  font-weight: 600;
+}
+/*# sourceMappingURL=style.css.map */
