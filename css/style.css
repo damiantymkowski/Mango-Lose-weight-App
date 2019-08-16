@@ -19,7 +19,7 @@ body {
   font-weight: 600;
 }
 
-.loginBox, .userInterfaceBox {
+.loginBox, .userInterfaceBox, .calculatorBMI {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,7 +90,7 @@ body {
   .menu {
     display: none;
   }
-  .loginBox, .userInterfaceBox {
+  .loginBox, .userInterfaceBox, .calculatorBMI {
     padding: 10px;
   }
   .modal {
@@ -171,10 +171,58 @@ body {
   }
 }
 
-.userInterfaceBox {
+.userInterfaceBox, .calculatorBMI {
   background-color: #fff;
   width: 50%;
-  height: 600px;
+  min-height: 600px;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+.calculatorBMI {
+  display: none;
+  min-height: 600px;
+}
+
+.calculatorBMI__text {
+  text-align: center;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.calculatorBMI__input {
+  width: 20%;
+  margin-top: 5px;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid #b1b1b1;
+  color: #4d4d4d;
+}
+
+.calculatorBMI__button {
+  border: 1px solid #d8d8d8;
+  border-radius: 1px;
+  padding: 10px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #cecece), color-stop(50%, white));
+  background: linear-gradient(to right, #cecece 50%, white 50%);
+  width: 20%;
+  margin-top: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #636363;
+  position: relative;
+  background-position: right bottom;
+  background-size: 200% 100%;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+.calculatorBMI__button:hover {
+  background-position: left bottom;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
 }
 
 .foodIcons {
@@ -225,6 +273,7 @@ body {
 .foodIcons__text {
   width: 180px;
   margin-left: 5px;
+  cursor: pointer;
 }
 
 .foodIcons__text--bold {

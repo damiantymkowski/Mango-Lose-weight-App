@@ -24,7 +24,7 @@ session_start();
     </ul>
     </nav>
 
-<img src="/img/food_ketchup_icon.png"/>
+
 
 <?php 
 if(isset($_SESSION['emailUsers'])){
