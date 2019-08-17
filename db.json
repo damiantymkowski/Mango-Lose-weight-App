@@ -1,0 +1,7 @@
+{
+    "calculatorbmi": [
+      { "id": 1, "html": "<section class=\"calculatorBMI\" id=\"something\"> <p class=\"calculatorBMI__text\">Oznaczanie wskaźnika masy ciała ma znaczenie w ocenie zagrożenia chorobami związanymi z nadwagą i otyłością, np. cukrzycą, chorobą niedokrwienną serca, miażdżycą. <p class=\"calculatorBMI__text\">Podwyższona wartość BMI związana jest ze zwiększonym ryzykiem wystąpienia takich chorób.</p></p><form action=\"includes/bmi.inc.php\" method=\"post\" class=\"calculatorBMI__form\"><input class=\"calculatorBMI__input\" id=\"bmiHeight\" placeholder=\"Wzrost\" name=\"Height\" required/><input class=\"calculatorBMI__input\" id=\"bmiWeight\" placeholder=\"Waga\" name=\"Weight\" required/><p class=\"calculatorBMI__text\" id=\"bmiResult\">Wynik</p><button class=\"calculatorBMI__button calculatorBMI__bmiResultbtn\" id=\"calcBmi\" name=\"save-bmi\">Oblicz</button></form> <button class=\"calculatorBMI__button\" id=\"backToInterface\">Wróć</button> </section>" },
+      { "id": 2, "title": "Post 2" },
+      { "id": 3, "title": "Post 3" }
+    ]
+  }
