@@ -144,7 +144,7 @@ button::-moz-focus-inner {
         margin-bottom: 10px;
     }
     &__input {
-        width: 20%;
+     
         margin-top: 5px;
         padding: 5px;
         border: none;
@@ -170,6 +170,11 @@ button::-moz-focus-inner {
     &__button:hover {
         background-position: left bottom;
         transition: all .5s ease-in;
+    }
+
+    &__bmiResultbtn {
+        width: 61%;
+        margin-left: 60px;
     }
 
 }
@@ -217,3 +222,4 @@ button::-moz-focus-inner {
         font-weight:600;
     }
 }
+
