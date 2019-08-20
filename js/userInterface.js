@@ -2,24 +2,32 @@ const userInterfaceBox = document.querySelector(".uiBox");
 const calculatorBMIbtn = document.querySelector(".calculatorBMIbtn");
 const calculatorBMIbox = document.querySelector(".calculatorBMI");
 let check = userInterfaceBox.innerHTML;
-
-window.addEventListener('popstate', function (e) {
-    this.alert(history.state);
-    });
-    
-
-calculatorBMIbtn.addEventListener('click', getDataFromJsonUI);
-
-
+calculatorBMIbtn.onclick = () => {
+    window.location.hash = "calculatorBMI";
+}
 function getDataFromJsonUI(){
-    fetch("https://my-json-server.typicode.com/damiantymkowski/Mango/calculatorbmi")
+    fetch("https://my-json-server.typicode.com/damiantymkowski/Mango/db")
     .then(function(response){
         return response.json();
     })
     .then(function(result){
-        output = result[0].html;
-        userInterfaceBox.innerHTML = output;
-           history.pushState('test', 'cos', 'test.html');
-           
+        if(window.location.hash=='#calculatorBMI')
+        {
+        userInterfaceBox.innerHTML = result.calculatorbmi[0].html;
+        }else{
+        userInterfaceBox.innerHTML = result.defaultInterface[0].html;
+        }
+      
     });
-} 
+}
+
+if(!window.location.hash=='')
+{
+    getDataFromJsonUI();
+}
+
+
+
+
+window.addEventListener("hashchange", getDataFromJsonUI, false);
+

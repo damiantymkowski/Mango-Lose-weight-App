@@ -1,10 +1,11 @@
 body{
     background-color: #272727;
-    font-family: 'Ubuntu';
+    font-family: 'Segoe UI';
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .logo{
@@ -60,6 +61,10 @@ body{
         color: white;
     }
 }
+a{
+    color: none !important;
+
+}
 @media only screen and (max-width: 600px) {
     .logo{
         display:none;
@@ -76,6 +81,7 @@ body{
     .foodIcons{
         width: 50% !important;
         height: unset !important;
+        font-family: 'Segoe UI';
     }
 
   }
@@ -180,9 +186,11 @@ button::-moz-focus-inner {
 }
 
 .foodIcons{
+    color: #4b4b4b;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    font-family: 'Segoe UI';
     width: 490px;
     height: 300px;
     &--ketchup{
@@ -216,10 +224,18 @@ button::-moz-focus-inner {
     &__text {
     width: 180px;
     margin-left: 5px;
+    margin-top: 30px;
     cursor: pointer;
     }
     &__text--bold {
         font-weight:600;
+    }
+    p{
+        margin-top: -10px;
+    }
+    a{
+        color: unset;
+        text-decoration: unset;
     }
 }
 

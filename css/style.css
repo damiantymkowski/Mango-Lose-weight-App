@@ -1,6 +1,6 @@
 body {
   background-color: #272727;
-  font-family: 'Ubuntu';
+  font-family: 'Segoe UI';
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,6 +83,10 @@ body {
   color: white;
 }
 
+a {
+  color: none !important;
+}
+
 @media only screen and (max-width: 600px) {
   .logo {
     display: none;
@@ -99,6 +103,7 @@ body {
   .foodIcons {
     width: 50% !important;
     height: unset !important;
+    font-family: 'Segoe UI';
   }
 }
 
@@ -230,6 +235,7 @@ button::-moz-focus-inner {
 }
 
 .foodIcons {
+  color: #4b4b4b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,6 +244,7 @@ button::-moz-focus-inner {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  font-family: 'Segoe UI';
   width: 490px;
   height: 300px;
 }
@@ -277,10 +284,20 @@ button::-moz-focus-inner {
 .foodIcons__text {
   width: 180px;
   margin-left: 5px;
+  margin-top: 30px;
   cursor: pointer;
 }
 
 .foodIcons__text--bold {
   font-weight: 600;
+}
+
+.foodIcons p {
+  margin-top: -10px;
+}
+
+.foodIcons a {
+  color: unset;
+  text-decoration: unset;
 }
 /*# sourceMappingURL=style.css.map */
