@@ -15,7 +15,7 @@ if(isset($_POST['save-bmi'])){
     mysqli_stmt_prepare($stmt,$sql);
     mysqli_stmt_bind_param($stmt, "sss", $bmiresult, $row['idUsers'], $dt);
     mysqli_stmt_execute($stmt);
-    header("Location: ../site.php#calculatorBMI");
+
     exit();
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
