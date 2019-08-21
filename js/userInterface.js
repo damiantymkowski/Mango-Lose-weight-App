@@ -22,9 +22,9 @@ function getDataFromJsonUI(){
         }
         function postStuff(){
             var hr = new XMLHttpRequest();
-            var url = "https://localhost/mango/site.php/includes/bmi.inc.php";
-            var height = document.getElementByName('Height')[0].value;
-            var weight = document.getElementByName('Weight')[0].value;
+            var url = "includes/bmi.inc.php";
+            var height = document.getElementById("bmiHeight").value;
+            var weight = document.getElementById("bmiWeight").value;
             var vars = "height="+height+"&weight="+weight;
             hr.open("POST", url, true);
             hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

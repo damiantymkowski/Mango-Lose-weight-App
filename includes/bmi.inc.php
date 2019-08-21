@@ -1,12 +1,12 @@
 <?php
-if(isset($_POST['save-bmi'])){
+
     session_start();
     require 'dbh.inc.php';
     $userid = mysqli_query ($conn, "SELECT idUsers FROM users WHERE idUsers ='".$_SESSION['emailUsers']."'");
     $row=mysqli_fetch_array($userid);
 
-    $height = $_POST['Height'];
-    $weight = $_POST['Weight'];
+    $height = $_POST['height'];
+    $weight = $_POST['weight'];
     $dt = date('Y-m-d H:i:s');
     $bmiresult = $weight / ($height * $height)*10000;
     $sql = "INSERT INTO usersbmi (bmiresult, iduser, date) VALUES (?,?,?)";
@@ -19,8 +19,4 @@ if(isset($_POST['save-bmi'])){
     exit();
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
-}else{
-    header("Location: ../site.php");
-    exit();
-}
-    
+ 
