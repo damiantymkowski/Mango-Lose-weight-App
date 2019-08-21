@@ -23,11 +23,9 @@ function getDataFromJsonUI(){
 
 if(!window.location.hash=='')
 {
+    userInterfaceBox.innerHTML = "";
     getDataFromJsonUI();
 }
-
-
-
 
 window.addEventListener("hashchange", getDataFromJsonUI, false);
 
