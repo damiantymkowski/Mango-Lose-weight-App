@@ -11,7 +11,7 @@ session_start();
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
         <link href="//fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://kit.fontawesome.com/a706ae0628.js"></script>
        
     </head>
     <body>
@@ -30,12 +30,13 @@ session_start();
     <div class="foodIcons--sandwich"></div><div class="foodIcons__text"><p class="foodIcons__text--bold">Statystyki</p><p>Zobacz swoje postępy</p></div>
     <div class="foodIcons--cola"></div><div class="foodIcons__text"><p class="foodIcons__text--bold">Czego nie jeść?</p><p>Rzuć te przyzwyczajenia </p></div>
         </div>
+        <form action="includes/logout.inc.php" method="post">
+    <button class="logout_button" name="logout-submit">wyloguj</button>
+    </form>
     </section> 
 
 
-    <!-- <form action="includes/logout.inc.php" method="post">
-    <button class="loginBox__button" style="width: 100%" name="logout-submit">wyloguj</button></br>
-    </form>-->
+    
 
 <?php 
 if(!isset($_SESSION['emailUsers'])){

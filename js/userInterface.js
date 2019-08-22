@@ -17,27 +17,27 @@ function getDataFromJsonUI(){
         userInterfaceBox.innerHTML = result.calculatorbmi[0].html;
         const calcBmiBtn = document.querySelector("#calcBmi");
         const bmiResultBox = document.querySelector("#bmiResult");
+        
         calcBmiBtn.onclick = () => {
-            postStuff();
+            postBmiData();
         }
-        function postStuff(){
-            var hr = new XMLHttpRequest();
-            var url = "includes/bmi.inc.php";
-            var height = document.getElementById("bmiHeight").value;
-            var weight = document.getElementById("bmiWeight").value;
-            var vars = "height="+height+"&weight="+weight;
-            hr.open("POST", url, true);
-            hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            hr.onreadystatechange = function() {
-                console.log(hr);
+        function postBmiData(){
+            let connectionPostBmiData = new XMLHttpRequest();
+            let url = "includes/bmi.inc.php";
+            let height = document.getElementById("bmiHeight").value;
+            let weight = document.getElementById("bmiWeight").value;
+            let vars = "height="+height+"&weight="+weight;
+            connectionPostBmiData.open("POST", url, true);
+            connectionPostBmiData.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            connectionPostBmiData.onreadystatechange = function() {
+                console.log(connectionPostBmiData);
             
-                if(hr.readyState == 4 && hr.status == 200) {
-                    var return_data = hr.responseText;
+                if(connectionPostBmiData.readyState == 4 && connectionPostBmiData.status == 200) {
+                    var return_data = connectionPostBmiData.responseText;
                     document.getElementById("status").innerHTML = return_data;
                 }
             }
-            // Send the data to PHP now... and wait for response to update the status div
-            hr.send(vars); // Actually execute the request
+            connectionPostBmiData.send(vars);
             document.getElementById("status").innerHTML = "processing...";
             }
         }else{
