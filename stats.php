@@ -24,7 +24,7 @@ session_start();
     </ul>
     </nav>
     <section class="userInterfaceBox">
-
+    <?php include("includes/stats.inc.php"); ?>
     </section>  
 
 <?php 

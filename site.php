@@ -31,7 +31,7 @@ session_start();
     <div class="foodIcons--cola"></div><div class="foodIcons__text"><p class="foodIcons__text--bold">Czego nie jeść?</p><p>Rzuć te przyzwyczajenia </p></div>
         </div>
         <form action="includes/logout.inc.php" method="post">
-    <button class="logout_button" name="logout-submit">wyloguj</button>
+    <button class="logoutButton" name="logout-submit">wyloguj</button>
     </form>
     </section> 
 
