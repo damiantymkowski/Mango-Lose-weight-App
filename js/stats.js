@@ -1,8 +1,11 @@
-
-
-var getStats = new XMLHttpRequest();
-getStats.onload = () => {
-    alert(this.responseText);
+var req = new XMLHttpRequest();
+req.open('GET', 'includes/stats.inc.php', true); 
+req.onreadystatechange = function (aEvt) {
+  if (req.readyState == 4) {
+     if(req.status == 200)
+      JSON.parse(this.responseText);
+     else
+      dump("Błąd podczas ładowania strony\n");
+  }
 };
-getStats.open("get", "includes/stats.inc.php", true);
-getStats.send();
+req.send(null);

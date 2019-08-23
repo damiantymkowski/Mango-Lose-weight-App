@@ -24,7 +24,7 @@ session_start();
     </ul>
     </nav>
     <section class="userInterfaceBox">
-    <?php include("includes/stats.inc.php"); ?>
+    
     </section>  
 
 <?php 
@@ -33,6 +33,6 @@ if(!isset($_SESSION['emailUsers'])){
     die();
 }
 ?>
-    
+        <script src="js/stats.js"></script>
     </body>
 </html>
