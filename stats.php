@@ -23,8 +23,9 @@ session_start();
         <li>o nas</li>
     </ul>
     </nav>
+
     <section class="userInterfaceBox">
-    <table>
+    <table cellspacing="0" class="userInterfaceBox__table">
                 <thead>
                     <tr> 
                          <th>DATA</th>
