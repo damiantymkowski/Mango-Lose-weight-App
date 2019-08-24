@@ -1,4 +1,6 @@
 const template = document.getElementById("statTemplate").content;
+let table = document.querySelector(".userInterfaceBox__table");
+let rows = table.getElementsByTagName("tr");
 
 var req = new XMLHttpRequest();
 req.open('GET', 'includes/stats.inc.php', true); 
@@ -14,6 +16,12 @@ req.onreadystatechange = function (aEvt) {
         let clone = document.importNode(template, true);
         let td = clone.querySelectorAll("td");
         tbody.appendChild(clone);
+        
+
+   if(i%2==0)
+     rows[i].className = "white";
+     else
+     rows[i].className = "gray";
       }
       
      }
@@ -22,3 +30,4 @@ req.onreadystatechange = function (aEvt) {
   }
 };
 req.send(null);
+

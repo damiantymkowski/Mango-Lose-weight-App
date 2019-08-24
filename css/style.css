@@ -334,4 +334,12 @@ button::-moz-focus-inner {
 .userBMI {
   width: 10px;
 }
+
+.gray {
+  background-color: #e4e4e4;
+}
+
+.white {
+  background-color: white;
+}
 /*# sourceMappingURL=style.css.map */
