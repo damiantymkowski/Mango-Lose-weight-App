@@ -8,7 +8,7 @@ req.onreadystatechange = function (aEvt) {
       let obj = JSON.parse(this.responseText);
 
       for(let i=0; i<obj.length; i++){
-        template.querySelector('.userBMI').textContent = obj[i]["0"];
+        template.querySelector('.userBMI').textContent = Math.round(obj[i]["0"]*100)/100;
         template.querySelector('.measurementDate').textContent = obj[i]["1"];
         let tbody = document.querySelector("tbody");
         let clone = document.importNode(template, true);
