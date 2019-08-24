@@ -24,7 +24,22 @@ session_start();
     </ul>
     </nav>
     <section class="userInterfaceBox">
-    
+    <table>
+                <thead>
+                    <tr> 
+                         <th>DATA</th>
+                         <th>BMI</th>
+                    </tr>
+                </thead>
+                <tbody id="statList">
+                    <template id="statTemplate">
+                     <tr> 
+                           <td class="measurementDate"></td>
+                           <td class="userBMI"></td>    
+                     </tr>
+                    </template>
+                </tbody>
+                </table>
     </section>  
 
 <?php 
