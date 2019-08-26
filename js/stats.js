@@ -30,15 +30,23 @@ req.onreadystatechange = function (aEvt) {
   }
 };
 req.send(null);
+const deleteButtonStats = document.querySelector(".bmiDeleteAllStats");
 
-function deleteBMIstats = () =>{
+deleteButtonStats.onclick = () =>{
+  deleteBMIstats();
+}
+
+const deleteBMIstats = () =>{
 let deleteRequest = new XMLHttpRequest();
 deleteRequest.open('POST', 'includes/delete_stats.inc.php',true);
 deleteRequest.onreadystatechange = function (aEvt) {
-  if (req.readyState == 4) {
-    if(req.status == 200){
+  if (deleteRequest.readyState == 4) {
+    if(deleteRequest.status == 200){
       console.log("Usunieto wszystkie wpisy");
      }
+    }else{
+      console.log("Błąd");
     }
   };
+  deleteRequest.send(null);
 }

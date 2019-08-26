@@ -41,6 +41,7 @@ session_start();
                     </template>
                 </tbody>
                 </table>
+                <button class="bmiDeleteAllStats">Usuń wszystkie wpisy</button>
     </section>  
 
 <?php 
