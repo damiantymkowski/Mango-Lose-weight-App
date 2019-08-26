@@ -27,7 +27,7 @@ session_start();
         <div class="foodIcons">
     <div class="foodIcons--ketchup"></div><div class="foodIcons__text"><p class="foodIcons__text--bold">Dziennik żywieniowy</p><p>Zapisz swój jadłospis</p></div>
     <div class="foodIcons--hamburger"></div><div class="foodIcons__text calculatorBMIbtn"><p class="foodIcons__text--bold">Kalkulator BMI</p><p>Oblicz swój wskaźnik BMI</p></div>
-    <div class="foodIcons--sandwich"></div><div class="foodIcons__text"><p class="foodIcons__text--bold">Statystyki</p><p>Zobacz swoje postępy</p></div>
+    <div class="foodIcons--sandwich"></div><div class="foodIcons__text"><a href="stats.php"><p class="foodIcons__text--bold">Statystyki</p><p>Zobacz swoje postępy</p></a></div>
     <div class="foodIcons--cola"></div><div class="foodIcons__text"><p class="foodIcons__text--bold">Czego nie jeść?</p><p>Rzuć te przyzwyczajenia </p></div>
         </div>
         <form action="includes/logout.inc.php" method="post">

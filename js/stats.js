@@ -31,3 +31,14 @@ req.onreadystatechange = function (aEvt) {
 };
 req.send(null);
 
+function deleteBMIstats = () =>{
+let deleteRequest = new XMLHttpRequest();
+deleteRequest.open('POST', 'includes/delete_stats.inc.php',true);
+deleteRequest.onreadystatechange = function (aEvt) {
+  if (req.readyState == 4) {
+    if(req.status == 200){
+      console.log("Usunieto wszystkie wpisy");
+     }
+    }
+  };
+}
