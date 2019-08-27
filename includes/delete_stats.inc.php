@@ -7,7 +7,9 @@
 
     if($deleteBMI!==FALSE)
     {
-        echo(403);
+        header("Location: ../index.php#calculatorBMI?delete=success");
+            exit();
     }else{
-        echo(401);
+        header("Location: ../index.php#calculatorBMI?error=noresults");
+        exit();
     }
