@@ -33,12 +33,11 @@ function getDataFromJsonUI(){
                 console.log(connectionPostBmiData);
             
                 if(connectionPostBmiData.readyState == 4 && connectionPostBmiData.status == 200) {
-                    var return_data = connectionPostBmiData.responseText;
-                    document.getElementById("status").innerHTML = return_data;
+                     alert("Test");
+                     var return_data = connectionPostBmiData.responseText;
                 }
             }
             connectionPostBmiData.send(vars);
-            document.getElementById("status").innerHTML = "processing...";
             }
         }else{
         userInterfaceBox.innerHTML = result.defaultInterface[0].html;

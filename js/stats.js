@@ -37,16 +37,18 @@ deleteButtonStats.onclick = () =>{
 }
 
 const deleteBMIstats = () =>{
-let deleteRequest = new XMLHttpRequest();
-deleteRequest.open('POST', 'includes/delete_stats.inc.php',true);
-deleteRequest.onreadystatechange = function (aEvt) {
-  if (deleteRequest.readyState == 4) {
-    if(deleteRequest.status == 200){
-      console.log("Usunieto wszystkie wpisy");
-     }
-    }else{
-      console.log("Błąd");
-    }
-  };
-  deleteRequest.send(null);
-}
+  let deleteRequest = new XMLHttpRequest();
+  deleteRequest.open('POST', 'includes/delete_stats.inc.php',true);
+  deleteRequest.onreadystatechange = function (aEvt) {
+    if (deleteRequest.readyState == 4) {
+      if(deleteRequest.status == 200){
+        let obj = JSON.parse(deleteRequest.responseText);
+        if(obj.Error == 303)
+        {
+          
+        }
+       }
+      }
+    };
+    deleteRequest.send(null);
+  }

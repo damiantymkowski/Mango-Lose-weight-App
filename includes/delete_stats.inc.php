@@ -3,13 +3,11 @@
     session_start();
     require 'dbh.inc.php';
 
-    $deleteBMI = mysqli_query($conn, "DELETE FROM usersbmi WHERE iduser ='".$_SESSION['emailUsers']."'");
-
-    if($deleteBMI!==FALSE)
+    $checkrows = mysqli_query($conn, "SELECT * FROM usersbmi WHERE iduser ='".$_SESSION['emailUsers']."'");
+    
+    if(mysqli_num_rows($checkrows)>0)
     {
-        header("Location: ../stats.php?delete=success");
-        exit();
+        mysqli_query($conn, "DELETE FROM usersbmi WHERE iduser ='".$_SESSION['emailUsers']."'");
     }else{
-        header("Location: ../stats.php?error=noresults");
-        exit();
+        echo json_encode(array("Error"=>303));
     }
