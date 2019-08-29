@@ -34,7 +34,10 @@ function getDataFromJsonUI(){
                 console.log(connectionPostBmiData);
             
                 if(connectionPostBmiData.readyState == 4 && connectionPostBmiData.status == 200) {
-                     var return_data = connectionPostBmiData.responseText;
+                    let errorHandlerBMIsave = JSON.parse(connectionPostBmiData.responseText);
+                   if(errorHandlerBMIsave.Success == "true"){
+                       alert("Sukces!");
+                   }
                 }
             }
             connectionPostBmiData.send(vars);

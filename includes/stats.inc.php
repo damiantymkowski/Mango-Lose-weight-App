@@ -8,5 +8,4 @@ session_start();
 
  if(mysqli_num_rows($result)>0){
         echo json_encode(mysqli_fetch_all($result));
- }else{
  }
