@@ -8,6 +8,7 @@
     if(mysqli_num_rows($checkrows)>0)
     {
         mysqli_query($conn, "DELETE FROM usersbmi WHERE iduser ='".$_SESSION['emailUsers']."'");
+        echo json_encode(array("Success"=>"true"));
     }else{
         echo json_encode(array("Error"=>303));
     }

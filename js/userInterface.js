@@ -1,6 +1,7 @@
 const userInterfaceBox = document.querySelector(".uiBox");
 const calculatorBMIbtn = document.querySelector(".calculatorBMIbtn");
 const calculatorBMIbox = document.querySelector(".calculatorBMI");
+
 let check = userInterfaceBox.innerHTML;
 calculatorBMIbtn.onclick = () => {
     window.location.hash = "calculatorBMI";
@@ -33,7 +34,6 @@ function getDataFromJsonUI(){
                 console.log(connectionPostBmiData);
             
                 if(connectionPostBmiData.readyState == 4 && connectionPostBmiData.status == 200) {
-                     alert("Test");
                      var return_data = connectionPostBmiData.responseText;
                 }
             }

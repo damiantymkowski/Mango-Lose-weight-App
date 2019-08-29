@@ -30,6 +30,10 @@ req.onreadystatechange = function (aEvt) {
   }
 };
 req.send(null);
+
+
+
+
 const deleteButtonStats = document.querySelector(".bmiDeleteAllStats");
 
 deleteButtonStats.onclick = () =>{
@@ -45,7 +49,10 @@ const deleteBMIstats = () =>{
         let obj = JSON.parse(deleteRequest.responseText);
         if(obj.Error == 303)
         {
-          
+          alert("Nie ma nic do usuniecia!");
+        }else if(obj.Success == "true"){
+          alert("Sukces");
+          window.location.reload(true);
         }
        }
       }
