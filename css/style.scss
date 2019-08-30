@@ -194,11 +194,6 @@ button::-moz-focus-inner {
         transition: all .5s ease-in;
     }
 
-    &__bmiResultbtn {
-        width: 61%;
-        margin-left: 60px;
-    }
-
 }
 
 .foodIcons{
@@ -274,4 +269,24 @@ button::-moz-focus-inner {
 }
 .white{
     background-color: white;
+}
+
+.modalBox{
+    width: 20%;
+    display: none;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border: 2px solid rgb(151, 151, 151);
+    -webkit-box-shadow: -12px 2px 151px -66px rgba(0,0,0,0.75);
+    -moz-box-shadow: -12px 2px 151px -66px rgba(0,0,0,0.75);
+    box-shadow: -12px 2px 151px -66px rgba(0,0,0,0.75);
+    &__text{
+        text-align: center;
+        font-size: 25px;
+    }
+    &__smalltext{
+        text-align:center;
+        font-size: 18px;
+    }
 }

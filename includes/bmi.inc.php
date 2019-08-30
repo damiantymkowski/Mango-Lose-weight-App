@@ -18,7 +18,7 @@
     mysqli_stmt_execute($stmt);
 
     if(mysqli_affected_rows($conn) > 0){
-        echo json_encode(array("Success"=>"true"));
+        echo json_encode(array("Success"=>"true","BMI"=>$bmiresult));
     }
 
     exit();

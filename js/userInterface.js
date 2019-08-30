@@ -1,6 +1,9 @@
 const userInterfaceBox = document.querySelector(".uiBox");
 const calculatorBMIbtn = document.querySelector(".calculatorBMIbtn");
 const calculatorBMIbox = document.querySelector(".calculatorBMI");
+const modalBoxBMI = document.querySelector(".modalBox");
+const modalBoxBMItext = document.querySelector(".modalBox__text");
+const modalBoxBMIsmalltext = document.querySelector(".modalBox__smalltext");
 
 let check = userInterfaceBox.innerHTML;
 calculatorBMIbtn.onclick = () => {
@@ -34,9 +37,11 @@ function getDataFromJsonUI(){
                 console.log(connectionPostBmiData);
             
                 if(connectionPostBmiData.readyState == 4 && connectionPostBmiData.status == 200) {
-                    let errorHandlerBMIsave = JSON.parse(connectionPostBmiData.responseText);
-                   if(errorHandlerBMIsave.Success == "true"){
-                       alert("Sukces!");
+                    let jsonResponseBMI = JSON.parse(connectionPostBmiData.responseText);
+                   if(jsonResponseBMI.Success == "true"){
+                       modalBoxBMI.style.display = "block";
+                       modalBoxBMItext.textContent = "Sukces!";
+                       modalBoxBMIsmalltext.textContent = "Twoje BMI wynosi: "+Math.round(jsonResponseBMI.BMI*100)/100+" Dodano wynik do bazy danych. "
                    }
                 }
             }
