@@ -42,6 +42,10 @@ function getDataFromJsonUI(){
                        modalBoxBMI.style.display = "block";
                        modalBoxBMItext.textContent = "Sukces!";
                        modalBoxBMIsmalltext.textContent = "Twoje BMI wynosi: "+Math.round(jsonResponseBMI.BMI*100)/100+" Dodano wynik do bazy danych. "
+                   }else{
+                    modalBoxBMI.style.display = "block";
+                    modalBoxBMItext.textContent = "Błąd!";
+                    modalBoxBMIsmalltext.textContent = "Wpisano błędne dane"
                    }
                 }
             }
@@ -62,3 +66,8 @@ if(!window.location.hash=='')
 
 window.addEventListener("hashchange", getDataFromJsonUI, false);
 
+window.onclick = function(event){
+    if(event.target == modalBoxBMI){
+        modalBoxBMI.style.display = "none";
+    }
+}

@@ -34,12 +34,11 @@ session_start();
     <button class="logoutButton" name="logout-submit">wyloguj</button>
     </form>
     </section> 
+
     <div class="modalBox">
 <p class="modalBox__text">Tekst</p>
 <p class="modalBox__smalltext">TekstTekstTekstTekst</p>
-</div>
-
-    
+</div> 
 
 <?php 
 if(!isset($_SESSION['emailUsers'])){
