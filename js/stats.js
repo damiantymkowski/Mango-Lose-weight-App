@@ -2,6 +2,17 @@ const template = document.getElementById("statTemplate").content;
 let table = document.querySelector(".userInterfaceBox__table");
 let rows = table.getElementsByTagName("tr");
 
+let formatDate = (dateString) => {
+  var date = new Date(dateString),
+    dd = date.getDate(),
+    mm = date.getMonth() + 1,
+    yyyy = date.getFullYear();
+    hh = date.getHours();
+    min = date.getMinutes();
+  mm = mm < 10 ? '0' + mm : mm;
+  return dd + '-' + mm +'-' + yyyy + ' ' + hh + ':' + min;
+}
+
 var req = new XMLHttpRequest();
 req.open('GET', 'includes/stats.inc.php', true); 
 req.onreadystatechange = function (aEvt) {
@@ -11,13 +22,12 @@ req.onreadystatechange = function (aEvt) {
 
       for(let i=0; i<obj.length; i++){
         template.querySelector('.userBMI').textContent = Math.round(obj[i]["0"]*100)/100;
-        template.querySelector('.measurementDate').textContent = obj[i]["1"];
+        template.querySelector('.measurementDate').textContent = formatDate(obj[i]["1"]);
         let tbody = document.querySelector("tbody");
         let clone = document.importNode(template, true);
         let td = clone.querySelectorAll("td");
         tbody.appendChild(clone);
-        
-
+  
    if(i%2==0)
      rows[i].className = "white";
      else
@@ -30,9 +40,6 @@ req.onreadystatechange = function (aEvt) {
   }
 };
 req.send(null);
-
-
-
 
 const deleteButtonStats = document.querySelector(".bmiDeleteAllStats");
 
@@ -59,3 +66,5 @@ const deleteBMIstats = () =>{
     };
     deleteRequest.send(null);
   }
+
+ 

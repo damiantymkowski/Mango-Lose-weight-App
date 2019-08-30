@@ -10,15 +10,16 @@
 
     $dt = date('Y-m-d H:i:s');
     if(is_numeric($height)&&is_numeric($weight)){
+        
     $bmiresult = $weight / ($height * $height)*10000;
     $sql = "INSERT INTO usersbmi (bmiresult, iduser, date) VALUES (?,?,?)";
-    
 
     $stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt,$sql);
     mysqli_stmt_bind_param($stmt, "sss", $bmiresult, $row['idUsers'], $dt);
     mysqli_stmt_execute($stmt);
     echo json_encode(array("Success"=>"true","BMI"=>$bmiresult));
+
     }else{
     echo json_encode(array("Error"=>403));
     }
