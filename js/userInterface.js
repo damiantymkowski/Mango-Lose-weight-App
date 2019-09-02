@@ -26,11 +26,13 @@ function getDataFromJsonUI(){
             postBmiData();
         }
         function postBmiData(){
+
             let connectionPostBmiData = new XMLHttpRequest();
             let url = "includes/bmi.inc.php";
             let height = document.getElementById("bmiHeight").value;
             let weight = document.getElementById("bmiWeight").value;
             let vars = "height="+height+"&weight="+weight;
+
             connectionPostBmiData.open("POST", url, true);
             connectionPostBmiData.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             connectionPostBmiData.onreadystatechange = function() {

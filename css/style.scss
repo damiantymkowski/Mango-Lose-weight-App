@@ -290,3 +290,10 @@ button::-moz-focus-inner {
         font-size: 18px;
     }
 }
+.foodDiary{
+    &__input{
+        @extend .calculatorBMI__input;
+        width: 100%;
+        text-align:center;
+    }
+}
