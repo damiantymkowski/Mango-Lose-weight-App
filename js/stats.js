@@ -39,23 +39,36 @@ deleteButtonStats.onclick = () =>{
 }
 
 const deleteBMIstats = () =>{
-  let deleteRequest = new XMLHttpRequest();
-  deleteRequest.open('POST', 'includes/delete_stats.inc.php',true);
-  deleteRequest.onreadystatechange = function (aEvt) {
-    if (deleteRequest.readyState == 4) {
-      if(deleteRequest.status == 200){
-        let obj = JSON.parse(deleteRequest.responseText);
+fetch("includes/delete_stats.inc.php", {
+  method: "post",
+  headers:{
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+  },
+})
+.then(response=>response.json())
+.then(response=>{
+  console.log(response);
+if(response.Error==303)
+alert("Nie ma nic do usuniecia!");
+else if(response.SUccess=="true")
+window.location.reload(true);
+})
+};
+
+
+
+
+
+
+        /*let obj = JSON.parse(deleteRequest.responseText);
         if(obj.Error == 303)
         {
           alert("Nie ma nic do usuniecia!");
         }else if(obj.Success == "true"){
           alert("Sukces");
-          window.location.reload(true);
-        }
-       }
-      }
-    };
-    deleteRequest.send(null);
-  }
+          window.location.reload(true);*/
+
+  
 
  
