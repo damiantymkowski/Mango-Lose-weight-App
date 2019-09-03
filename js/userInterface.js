@@ -25,34 +25,32 @@ function getDataFromJsonUI(){
         calcBmiBtn.onclick = () => {
             postBmiData();
         }
-        function postBmiData(){
 
-            let connectionPostBmiData = new XMLHttpRequest();
-            let url = "includes/bmi.inc.php";
+        const postBmiData = () =>{
             let height = document.getElementById("bmiHeight").value;
             let weight = document.getElementById("bmiWeight").value;
-            let vars = "height="+height+"&weight="+weight;
-
-            connectionPostBmiData.open("POST", url, true);
-            connectionPostBmiData.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            connectionPostBmiData.onreadystatechange = function() {
-                console.log(connectionPostBmiData);
             
-                if(connectionPostBmiData.readyState == 4 && connectionPostBmiData.status == 200) {
-                    let jsonResponseBMI = JSON.parse(connectionPostBmiData.responseText);
-                   if(jsonResponseBMI.Success == "true"){
+            let formData = new FormData();
+            formData.append('weight', weight);
+            formData.append('height', height);
+            fetch("includes/bmi.inc.php", {
+                method: "POST",
+                body: formData
+                })
+            .then(response=>response.json())
+            .then(response=>{
+                   if(response.Success == "true"){
                        modalBoxBMI.style.display = "block";
                        modalBoxBMItext.textContent = "Sukces!";
-                       modalBoxBMIsmalltext.textContent = "Twoje BMI wynosi: "+Math.round(jsonResponseBMI.BMI*100)/100+" Dodano wynik do bazy danych. "
+                       modalBoxBMIsmalltext.textContent = "Twoje BMI wynosi: "+Math.round(response.BMI*100)/100+" Dodano wynik do bazy danych. "
                    }else{
                     modalBoxBMI.style.display = "block";
                     modalBoxBMItext.textContent = "Błąd!";
                     modalBoxBMIsmalltext.textContent = "Wpisano błędne dane"
                    }
-                }
-            }
-            connectionPostBmiData.send(vars);
-            }
+                });
+            };
+            
         }else{
         userInterfaceBox.innerHTML = result.defaultInterface[0].html;
         }
