@@ -13,16 +13,12 @@ let formatDate = (dateString) => {
   return dd + '-' + mm +'-' + yyyy + ' ' + hh + ':' + min;
 }
 
-var req = new XMLHttpRequest();
-req.open('GET', 'includes/stats.inc.php', true); 
-req.onreadystatechange = function (aEvt) {
-  if (req.readyState == 4) {
-     if(req.status == 200){
-      let obj = JSON.parse(this.responseText);
-
-      for(let i=0; i<obj.length; i++){
-        template.querySelector('.userBMI').textContent = Math.round(obj[i]["0"]*100)/100;
-        template.querySelector('.measurementDate').textContent = formatDate(obj[i]["1"]);
+fetch("includes/stats.inc.php")
+.then(res=>res.json())
+.then(res=>{
+      for(let i=0; i<res.length; i++){
+        template.querySelector('.userBMI').textContent = Math.round(res[i]["0"]*100)/100;
+        template.querySelector('.measurementDate').textContent = formatDate(res[i]["1"]);
         let tbody = document.querySelector("tbody");
         let clone = document.importNode(template, true);
         let td = clone.querySelectorAll("td");
@@ -30,16 +26,11 @@ req.onreadystatechange = function (aEvt) {
   
    if(i%2==0)
      rows[i].className = "white";
-     else
+   else
      rows[i].className = "gray";
       }
-      
-     }
-     else
-      dump("Błąd podczas ładowania strony\n");
-  }
-};
-req.send(null);
+
+  })
 
 const deleteButtonStats = document.querySelector(".bmiDeleteAllStats");
 

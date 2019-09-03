@@ -27,12 +27,23 @@ session_start();
     <section class="userInterfaceBox">
     
     <div class="foodDiary">
-    <input type="text" class="foodDiary__input" placeholder="Dodaj jedzenie"/><button>Dodaj</button>
-    <li>x</li>
-    <li>x</li>
-    <li>x</li>
-    <li>x</li>
-    <li>x</li>
+    <table cellspacing="0" class="userInterfaceBox__table">
+                <thead>
+                    <tr> 
+                         <th>Produkt</th>
+                         <th>Kalorie</th>
+                    </tr>
+                </thead>
+                <tbody id="statList">
+                    <template id="statTemplate">
+                     <tr> 
+                           <td class="foodName"></td>
+                           <td class="foodCalories"></td>    
+                     </tr>
+                    </template>
+                </tbody>
+                </table>
+                <input type="text" class="foodDiary__input" placeholder="Dodaj jedzenie"/><button>Dodaj</button>
     </div>
 
     </section>  
