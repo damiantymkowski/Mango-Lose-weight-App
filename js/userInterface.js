@@ -10,7 +10,7 @@ calculatorBMIbtn.onclick = () => {
     window.location.hash = "calculatorBMI";
 }
 
-function getDataFromJsonUI(){
+const getDataFromJsonUI = () => {
     fetch("https://my-json-server.typicode.com/damiantymkowski/Mango/db")
     .then(function(response){
         return response.json();
@@ -54,7 +54,6 @@ function getDataFromJsonUI(){
         }else{
         userInterfaceBox.innerHTML = result.defaultInterface[0].html;
         }
-      
     });
 }
 

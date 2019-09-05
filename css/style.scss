@@ -293,7 +293,7 @@ button::-moz-focus-inner {
 .foodDiary{
     &__input{
         @extend .calculatorBMI__input;
-        width: 100%;
+        width: 50%;
         text-align:center;
     }
 }

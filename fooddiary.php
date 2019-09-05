@@ -43,7 +43,8 @@ session_start();
                     </template>
                 </tbody>
                 </table>
-                <input type="text" class="foodDiary__input" placeholder="Dodaj jedzenie"/><button>Dodaj</button>
+                <input type="text" class="foodDiary__input" placeholder="Nazwa produktu" id="productname"/>
+                <input type="text" class="foodDiary__input" placeholder="Kaloryczność" id="calories"/><button id="foodDiary__addProductBtn">Dodaj</button>
     </div>
 
     </section>  
