@@ -30,13 +30,15 @@ session_start();
     <table cellspacing="0" class="userInterfaceBox__table">
                 <thead>
                     <tr> 
+                         <th>Data</th>
                          <th>Produkt</th>
                          <th>Kalorie</th>
                     </tr>
                 </thead>
-                <tbody id="statList">
-                    <template id="statTemplate">
+                <tbody id="foodList">
+                    <template id="foodTemplate">
                      <tr> 
+                           <td class="foodDate"></td>
                            <td class="foodName"></td>
                            <td class="foodCalories"></td>    
                      </tr>

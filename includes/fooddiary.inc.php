@@ -13,6 +13,8 @@ $dt = date('Y-m-d H:i:s');
 
 $sql = "INSERT INTO fooddiary (calories, product, date, iduser) VALUES (?,?,?,?)";
 
+$result = mysqli_query($conn, $sql);
+
 $stmt = mysqli_stmt_init($conn);
 mysqli_stmt_prepare($stmt,$sql);
 mysqli_stmt_bind_param($stmt, "ssss", $calories, $product, $dt, $row['idUsers']);
