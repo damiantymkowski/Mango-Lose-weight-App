@@ -1,9 +1,9 @@
 <?php
 
-$servername = "remotemysql.com";
-$dBUsername = "Yny4lyYMoh";
-$dBPassword = "GqCMcdxwvU";
-$dBName = "Yny4lyYMoh";
+$servername = "###.com";
+$dBUsername = "###";
+$dBPassword = "###";
+$dBName = "###";
 
 $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
 
