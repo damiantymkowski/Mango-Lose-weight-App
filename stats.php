@@ -12,7 +12,7 @@ session_start();
         <link rel="stylesheet" href="css/style.css">
         <link href="//fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
         <script src="https://kit.fontawesome.com/a706ae0628.js"></script>
-       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
     </head>
     <body>
 
@@ -42,6 +42,7 @@ session_start();
                 </tbody>
                 </table>
                 <button class="bmiDeleteAllStats">Usuń wszystkie wpisy</button>
+                <canvas id="bmiChart" width="100" height="40"></canvas>
     </section>  
 
 <?php 

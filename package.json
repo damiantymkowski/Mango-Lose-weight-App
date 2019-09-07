@@ -1,0 +1,22 @@
+{
+  "name": "mango",
+  "version": "1.0.0",
+  "description": "Mango is a simple web application to tracking your progress in loss weight",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damiantymkowski/Mango.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damiantymkowski/Mango/issues"
+  },
+  "homepage": "https://github.com/damiantymkowski/Mango#readme",
+  "dependencies": {
+    "chart": "^0.1.2"
+  }
+}
