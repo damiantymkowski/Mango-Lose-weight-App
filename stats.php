@@ -42,7 +42,7 @@ session_start();
                 </tbody>
                 </table>
                 <button class="bmiDeleteAllStats">Usuń wszystkie wpisy</button>
-                <canvas id="bmiChart" width="100" height="40"></canvas>
+                <canvas id="bmiChart" width="90" height="30"></canvas>
     </section>  
 
 <?php 
