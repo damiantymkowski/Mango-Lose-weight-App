@@ -2,6 +2,7 @@ const addProductBtn = document.getElementById("foodDiary__addProductBtn");
 const template = document.getElementById("foodTemplate").content;
 let table = document.querySelector(".userInterfaceBox__table");
 let rows = table.getElementsByTagName("tr");
+const caloriesNumber = document.getElementById("foodDiary__calories");
 
 addProductBtn.onclick = () =>{
     postDiaryData();
@@ -20,7 +21,8 @@ const postDiaryData = () =>{
         body: formDataDiary
     })
     .then(response=>{
-
+      console.log('Success:', JSON.stringify("true"));
+      location.reload();
     });
 }
 
@@ -35,6 +37,8 @@ let formatDate = (dateString) => {
     return dd + '-' + mm +'-' + yyyy + ' ' + hh + ':' + min;
   }
 
+let calories = 0;
+
 fetch("includes/foodlist.inc.php")
 .then(res=>res.json())
 .then(res=>{
@@ -47,7 +51,8 @@ fetch("includes/foodlist.inc.php")
         let clone = document.importNode(template, true);
         let td = clone.querySelectorAll("td");
         tbody.appendChild(clone);
-  
+        calories += parseInt(res[i]["1"],10);
+        caloriesNumber.textContent = calories;
    if(i%2==0)
      rows[i].className = "white";
    else
@@ -55,3 +60,4 @@ fetch("includes/foodlist.inc.php")
       }
 
   })
+

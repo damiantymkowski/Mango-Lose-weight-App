@@ -45,6 +45,7 @@ session_start();
                     </template>
                 </tbody>
                 </table>
+                <p>Liczba kalorii:</p><p id="foodDiary__calories"></p>
                 <input type="text" class="foodDiary__input" placeholder="Nazwa produktu" id="productname"/>
                 <input type="text" class="foodDiary__input" placeholder="Kaloryczność" id="calories"/><button id="foodDiary__addProductBtn">Dodaj</button>
     </div>
