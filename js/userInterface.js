@@ -70,3 +70,10 @@ window.onclick = function(event){
         modalBoxBMI.style.display = "none";
     }
 }
+
+fetch("http://api.openweathermap.org/data/2.5/weather?q=Warsaw,pl&appid=fb02e8250c0b25415442b1591d535c2b")
+.then(responseWeather=>responseWeather.json())
+.then(responseWeather=>{
+const temperature = document.getElementById("weather__temperature");
+temperature.textContent = Math.round(responseWeather["main"].temp-273.15);
+});

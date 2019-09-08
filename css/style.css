@@ -105,6 +105,10 @@ a {
     height: unset !important;
     font-family: 'Segoe UI';
   }
+  .userInterfaceBox, .calculatorBMI {
+    width: 100% !important;
+    height: 100vh;
+  }
 }
 
 .navigation {
@@ -317,8 +321,45 @@ button::-moz-focus-inner {
 .logoutButton {
   background-color: unset;
   border: unset;
-  font-size: 15px;
+  font-weight: 900;
+}
+
+.logoutButton__icon:before {
+  font-size: 25px;
+  font-family: "Font Awesome 5 Free";
+  content: '\f52b';
   cursor: pointer;
+  color: #7e7e7e;
+}
+
+.logoutButton__icon:hover:before {
+  -webkit-animation-name: fadeColor;
+          animation-name: fadeColor;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  color: #313131;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+@-webkit-keyframes fadeColor {
+  from {
+    color: #7e7e7e;
+  }
+  to {
+    color: #313131;
+  }
+}
+
+@keyframes fadeColor {
+  from {
+    color: #7e7e7e;
+  }
+  to {
+    color: #313131;
+  }
 }
 
 .measurementDate {
@@ -362,5 +403,15 @@ button::-moz-focus-inner {
 .foodDiary__input {
   width: 50%;
   text-align: center;
+}
+
+.weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.weather p {
+  padding: 2px;
 }
 /*# sourceMappingURL=style.css.map */

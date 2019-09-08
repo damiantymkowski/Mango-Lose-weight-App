@@ -31,13 +31,18 @@ session_start();
     <div class="foodIcons--cola"></div><div class="foodIcons__text"><p class="foodIcons__text--bold">Czego nie jeść?</p><p>Rzuć te przyzwyczajenia </p></div>
         </div>
         <form action="includes/logout.inc.php" method="post">
-    <button class="logoutButton" name="logout-submit">wyloguj</button>
+    <button class="logoutButton" name="logout-submit"><p class="logoutButton__icon"></p></button>
     </form>
+
+    <div class="weather">
+    <p class="weather__text">W Warszawie jest aktualnie</p><p id="weather__temperature">0</p><p>stopni</p>
+    </div>
+
     </section> 
 
     <div class="modalBox">
-<p class="modalBox__text">Tekst</p>
-<p class="modalBox__smalltext">TekstTekstTekstTekst</p>
+<p class="modalBox__text"></p>
+<p class="modalBox__smalltext"></p>
 </div> 
 
 <?php 
@@ -46,8 +51,6 @@ if(!isset($_SESSION['emailUsers'])){
     die();
 }
 ?>
-    
-
 
     <script src="js/loginbox.js"></script>
     <script src="js/userInterface.js"></script>

@@ -83,7 +83,10 @@ a{
         height: unset !important;
         font-family: 'Segoe UI';
     }
-
+    .userInterfaceBox{
+        width: 100% !important;
+        height:100vh;
+    }
   }
 .navigation{
     position:fixed;
@@ -252,8 +255,32 @@ button::-moz-focus-inner {
 .logoutButton{
     background-color: unset;
     border: unset;
-    font-size: 15px;
-    cursor: pointer;
+    font-weight: 900;
+    &__icon:before{
+        font-size: 25px;
+        font-family: "Font Awesome 5 Free";
+        content: '\f52b';
+        cursor: pointer;
+        color: #7e7e7e;
+    }
+    &__icon:hover:before{
+        animation-name: fadeColor;
+        animation-duration: 0.5s;
+        color:rgb(49, 49, 49);
+    }
+}
+
+*:focus {
+    outline: 0 !important;
+}
+
+@keyframes fadeColor{
+    from{
+        color: #7e7e7e;
+    }
+    to{
+        color:rgb(49, 49, 49);
+    }
 }
 
 .measurementDate{
@@ -297,3 +324,11 @@ button::-moz-focus-inner {
         text-align:center;
     }
 }
+
+.weather{
+    display: flex;
+    p{
+        padding: 2px;
+    }
+}
+
