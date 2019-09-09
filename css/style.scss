@@ -79,13 +79,13 @@ a{
         width: 80% !important;
     }
     .foodIcons{
-        width: 50% !important;
+        width: 95% !important;
         height: unset !important;
         font-family: 'Segoe UI';
     }
     .userInterfaceBox{
-        width: 100% !important;
-        height:100vh;
+        width: 90% !important;
+        height:85vh;
     }
   }
 .navigation{
@@ -320,8 +320,18 @@ button::-moz-focus-inner {
 .foodDiary{
     &__input{
         @extend .calculatorBMI__input;
-        width: 50%;
+        width: 100%;
         text-align:center;
+    }
+    &__caloriesResult{
+        display: flex;
+    }
+    p{
+        padding: 2px;
+    }
+    &__addProductBtn{
+       @extend .loginBox__button;
+       width: 50%;
     }
 }
 

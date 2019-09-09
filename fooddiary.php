@@ -45,9 +45,11 @@ session_start();
                     </template>
                 </tbody>
                 </table>
-                <p>Liczba kalorii:</p><p id="foodDiary__calories"></p>
+                <div class="foodDiary__caloriesResult">
+                <p>Liczba kalorii:</p><p id="foodDiary__caloriesResult--number"></p>
+                </div>
                 <input type="text" class="foodDiary__input" placeholder="Nazwa produktu" id="productname"/>
-                <input type="text" class="foodDiary__input" placeholder="Kaloryczność" id="calories"/><button id="foodDiary__addProductBtn">Dodaj</button>
+                <input type="text" class="foodDiary__input" placeholder="Kaloryczność" id="calories"/><button class="foodDiary__addProductBtn">Dodaj</button>
     </div>
 
     </section>  

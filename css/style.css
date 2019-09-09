@@ -66,7 +66,7 @@ body {
   padding: 10px;
 }
 
-.loginBox__button {
+.loginBox__button, .foodDiary__addProductBtn {
   width: 45%;
   margin-top: 45px;
   margin-left: 30%;
@@ -101,13 +101,13 @@ a {
     width: 80% !important;
   }
   .foodIcons {
-    width: 50% !important;
+    width: 95% !important;
     height: unset !important;
     font-family: 'Segoe UI';
   }
   .userInterfaceBox, .calculatorBMI {
-    width: 100% !important;
-    height: 100vh;
+    width: 90% !important;
+    height: 85vh;
   }
 }
 
@@ -401,8 +401,22 @@ button::-moz-focus-inner {
 }
 
 .foodDiary__input {
-  width: 50%;
+  width: 100%;
   text-align: center;
+}
+
+.foodDiary__caloriesResult {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.foodDiary p {
+  padding: 2px;
+}
+
+.foodDiary__addProductBtn {
+  width: 50%;
 }
 
 .weather {

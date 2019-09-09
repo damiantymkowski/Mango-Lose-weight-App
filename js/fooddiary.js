@@ -1,8 +1,8 @@
-const addProductBtn = document.getElementById("foodDiary__addProductBtn");
+const addProductBtn = document.getElementsByClassName("foodDiary__addProductBtn"); 
 const template = document.getElementById("foodTemplate").content;
 let table = document.querySelector(".userInterfaceBox__table");
 let rows = table.getElementsByTagName("tr");
-const caloriesNumber = document.getElementById("foodDiary__calories");
+const caloriesNumber = document.getElementById("foodDiary__caloriesResult--number");
 
 addProductBtn.onclick = () =>{
     postDiaryData();
